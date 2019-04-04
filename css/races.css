@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'Formula1';
+    src: url('../letras/Formula1-Regular_web_0.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}

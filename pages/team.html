@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <!--Jquery y otros -->
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+    <script crossorigin="anonymous" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+    </script>
+    <script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+    </script>
+    <script crossorigin="anonymous" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+    </script>
+    <!--Bootstrap -->
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+    <script crossorigin="anonymous" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+    </script>
+    <!--Agregando estilos -->
+    <link href="../styles/index.css" rel="stylesheet">
+    <link href="../styles/team.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- VueJs-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- FireBase -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+    <link rel="icon" sizes="16x16" href="../favicon.png" />
+    <title>Equipos</title>
+</head>
+
+<body>
+    <!--Barra de navegacion-->
+    <nav class="site-header sticky-top py-1" style="width: 100%">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2 d-none d-md-inline-block" href="../index.html"><img id="fotico"
+                    src="../resources/formula.png" alt="Formula 1" width="90" /> </a>
+            <a class="py-2 d-none d-md-inline-block" href="racers.html">Racer</a>
+            <a class="py-2 d-none d-md-inline-block" href="driver.html">Driver</a>
+            <a class="py-2 d-none d-md-inline-block" href="team.html">Teams</a>
+        </div>
+    </nav>
+
+    <!--Contenido-->
+    <!-- Equipo 1-->
+    <div class="equipo">
+        <section class="block">
+            <h1>Formula 1® Teams</h1>
+            <a href="mercedes.html">
+                <div class="info" style="border-right: 8px solid #00d2be;">
+                    <div class="c-info">
+                        <div class="left">
+                            <div class="panel-up">
+                                <img src="../resources/alemania.png">
+                                <h2>Mercedes</h2>
+                            </div>
+                            <div class="panel-mid">
+                                <div class="lineal">
+                                    <img src="../icons/helmet.ico" alt="">
+                                    <p>Lewis Hamilton</p>
+                                </div>
+                                <div class="lineal">
+                                    <img src="../icons/helmet.ico" alt="">
+                                    <p>Valtteri Bottas</p>
+                                </div>
+                            </div>
+                            <div class="panel-bot">
+                                <img src="../resources/sponsol.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="panels">
+                                <i class=" icon fas fa-trophy"></i>
+                                <h3>Podios acabados</h3>
+                                <p>164</p>
+                            </div>
+                            <div class="panels">
+                                <i class=" icon fas fa-award"></i>
+                                <h3>Títulos de campeonato</h3>
+                                <p>5</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="img">
+                    <div class="imgfondo" style="background-image: url('../resources/mercedes.jpg');"></div>
+                </div>
+            </a>
+        </section>
+    </div>
+
+    <!-- Equipo 2 -->
+    <div class="equipo">
+        <section class="block">
+            <a href="ferrari.html">
+                <div class="info" style="border-right: 8px solid #DC0000;">
+                    <div class="c-info">
+                        <div class="left">
+                            <div class="panel-up">
+                                <img src="../resources/ferrari.jpg">
+                                <h2>Ferrari</h2>
+                            </div>
+                            <div class="panel-mid">
+                                <div class="lineal">
+                                    <img src="../icons/helmet.ico" alt="">
+                                    <p>Sebastian Vettel</p>
+                                </div>
+                                <div class="lineal">
+                                    <img src="../icons/helmet.ico" alt="">
+                                    <p>Charles Leclerc</p>
+                                </div>
+                            </div>
+                            <div class="panel-bot">
+                                <img src="../resources/spon-segunda.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="panels">
+                                <i class=" icon fas fa-trophy"></i>
+                                <h3>Podios acabados</h3>
+                                <p>764</p>
+                            </div>
+                            <div class="panels">
+                                <i class=" icon fas fa-award"></i>
+                                <h3>Títulos de campeonato</h3>
+                                <p>16</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="img">
+                    <div class="imgfondo" style="background-image: url('../resources/segunda.jpg');"></div>
+                </div>
+            </a>
+        </section>
+    </div>
+
+    <!-- Equipo 3 -->
+    <div class="equipo">
+        <section class="block">
+            <a href="redbull.html">
+                <div class="info" style="border-right: 8px solid #1E41FF;">
+                    <div class="c-info">
+                        <div class="left">
+                            <div class="panel-up">
+                                <img src="../resources/espana.png">
+                                <h2>Red Bull Racing</h2>
+                            </div>
+                            <div class="panel-mid">
+                                <div class="lineal">
+                                    <img src="../icons/helmet.ico" alt="">
+                                    <p>Max Verstappen</p>
+                                </div>
+                                <div class="lineal">
+                                    <img src="../icons/helmet.ico" alt="">
+                                    <p>Pierre Gasly</p>
+                                </div>
+                            </div>
+                            <div class="panel-bot">
+                                <img src="../resources/spon-tercera.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="panels">
+                                <i class=" icon fas fa-trophy"></i>
+                                <h3>Podios acabados</h3>
+                                <p>162</p>
+                            </div>
+                            <div class="panels">
+                                <i class=" icon fas fa-award"></i>
+                                <h3>Títulos de campeonato</h3>
+                                <p>4</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="img">
+                    <div class="imgfondo" style="background-image: url('../resources/tercera.jpg');"></div>
+                </div>
+            </a>
+        </section>
+    </div>
+
+    <!-- Equipo 4 -->
+    <div class="equipo">
+        <section class="block">
+            <a href="alfaromeo.html">
+                <div class="info" style="border-right: 8px solid #9B0000;">
+                    <div class="c-info">
+                        <div class="left">
+                            <div class="panel-up">
+                                <img src="../resources/suecia.png">
+                                <h2>Alfa Romeo</h2>
+                            </div>
+                            <div class="panel-mid">
+                                <div class="lineal">
+                                    <img src="../icons/helmet.ico" alt="">
+                                    <p>Kimi Räikkönen</p>
+                                </div>
+                                <div class="lineal">
+                                    <img src="../icons/helmet.ico" alt="">
+                                    <p>Antonio Giovinazzi</p>
+                                </div>
+                            </div>
+                            <div class="panel-bot">
+                                <img src="../resources/spon-sexta.png" alt="">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="panels">
+                                <i class=" icon fas fa-trophy"></i>
+                                <h3>Podios acabados</h3>
+                                <p>27</p>
+                            </div>
+                            <div class="panels">
+                                <i class=" icon fas fa-award"></i>
+                                <h3>Títulos de campeonato</h3>
+                                <p>N/A</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="img">
+                    <div class="imgfondo" style="background-image: url('../resources/sexta.jpg');"></div>
+                </div>
+            </a>
+        </section>
+    </div>
+
+    <!-- Equipo 5 -->
+    <div class="equipo">
+        <section class="block">
+            <a href="mclaren.html">
+                <div class="info" style="border-right: 8px solid #FF8700;">
+                    <div class="c-info">
+                        <div class="left">
+                            <div class="panel-up">
+                                <img src="../resources/ingla.jpg">
+                                <h2>McLaren</h2>
+                            </div>
+                            <div class="panel-mid">
+                                <div class="lineal">
+                                    <img src="../icons/helmet.ico" alt="">
+                                    <p>Carlos Sainz</p>
+                                </div>
+                                <div class="lineal">
+                                    <img src="../icons/helmet.ico" alt="">
+                                    <p>Lando Norris</p>
+                                </div>
+                            </div>
+                            <div class="panel-bot">
+                                <img src="../resources/spon-novena.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="panels">
+                                <i class=" icon fas fa-trophy"></i>
+                                <h3>Podios acabados</h3>
+                                <p>485</p>
+                            </div>
+                            <div class="panels">
+                                <i class=" icon fas fa-award"></i>
+                                <h3>Títulos de campeonato</h3>
+                                <p>8</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="img">
+                    <div class="imgfondo" style="background-image: url('../resources/novena.jpg');"></div>
+                </div>
+            </a>
+        </section>
+    </div>
+
+    <!-- Equipo 6 -->
+    <div class="equipo">
+        <section class="block">
+            <a href="haas.html">
+                <div class="info" style="border-right: 8px solid #BD9E57;">
+                    <div class="c-info">
+                        <div class="left">
+                            <div class="panel-up">
+                                <img src="../resources/usa.png">
+                                <h2>Haas</h2>
+                            </div>
+                            <div class="panel-mid">
+                                <div class="lineal">
+                                    <img src="../icons/helmet.ico" alt="">
+                                    <p>Romain Grosjean</p>
+                                </div>
+                                <div class="lineal">
+                                    <img src="../icons/helmet.ico" alt="">
+                                    <p>Kevin Magnussen</p>
+                                </div>
+                            </div>
+                            <div class="panel-bot">
+                                <img src="../resources/spon-cuarta.png" alt="">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="panels">
+                                <i class=" icon fas fa-trophy"></i>
+                                <h3>Podios acabados</h3>
+                                <p>N/A</p>
+                            </div>
+                            <div class="panels">
+                                <i class=" icon fas fa-award"></i>
+                                <h3>Títulos de campeonato</h3>
+                                <p>N/A</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="img">
+                    <div class="imgfondo" style="background-image: url('../resources/cuarta.jpg');"></div>
+                </div>
+            </a>
+        </section>
+    </div>
+
+    <!-- Equipo 7 -->
+    <div class="equipo">
+        <section class="block">
+            <a href="renault.html">
+                <div class="info" style="border-right: 8px solid #FFF500;">
+                    <div class="c-info">
+                        <div class="left">
+                            <div class="panel-up">
+                                <img src="../resources/francia.png">
+                                <h2>Renault</h2>
+                            </div>
+                            <div class="panel-mid">
+                                <div class="lineal">
+                                    <img src="../icons/helmet.ico" alt="">
+                                    <p>Nico Hulkenberg</p>
+                                </div>
+                                <div class="lineal">
+                                    <img src="../icons/helmet.ico" alt="">
+                                    <p>Daniel Ricciardo</p>
+                                </div>
+                            </div>
+                            <div class="panel-bot">
+                                <img src="../resources/spon-quinta.png" alt="">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="panels">
+                                <i class=" icon fas fa-trophy"></i>
+                                <h3>Podios acabados</h3>
+                                <p>59</p>
+                            </div>
+                            <div class="panels">
+                                <i class=" icon fas fa-award"></i>
+                                <h3>Títulos de campeonato</h3>
+                                <p>2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="img">
+                    <div class="imgfondo" style="background-image: url('../resources/quinta.jpg');"></div>
+                </div>
+            </a>
+        </section>
+    </div>
+
+    <!-- Equipo 8 -->
+    <div class="equipo">
+        <section class="block">
+            <a href="tororosso.html">
+                <div class="info" style="border-right: 8px solid #469BFF;">
+                    <div class="c-info">
+                        <div class="left">
+                            <div class="panel-up">
+                                <img src="../resources/ferrari.jpg">
+                                <h2>Toro Rosso</h2>
+                            </div>
+                            <div class="panel-mid">
+                                <div class="lineal">
+                                    <img src="../icons/helmet.ico" alt="">
+                                    <p>Daniil Kvyat</p>
+                                </div>
+                                <div class="lineal">
+                                    <img src="../icons/helmet.ico" alt="">
+                                    <p>Alexander Albon</p>
+                                </div>
+                            </div>
+                            <div class="panel-bot">
+                                <img src="../resources/spon-octava.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="panels">
+                                <i class=" icon fas fa-trophy"></i>
+                                <h3>Podios acabados</h3>
+                                <p>1</p>
+                            </div>
+                            <div class="panels">
+                                <i class=" icon fas fa-award"></i>
+                                <h3>Títulos de campeonato</h3>
+                                <p>N/A</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="img">
+                    <div class="imgfondo" style="background-image: url('../resources/octava.jpg');"></div>
+                </div>
+            </a>
+        </section>
+    </div>
+
+    <!-- Equipo 9 -->
+    <div class="equipo">
+        <section class="block">
+            <a href="racingpoint.html">
+                <div class="info" style="border-right: 8px solid #F596C8;">
+                    <div class="c-info">
+                        <div class="left">
+                            <div class="panel-up">
+                                <img src="../resources/ingla.jpg">
+                                <h2>Racing Point</h2>
+                            </div>
+                            <div class="panel-mid">
+                                <div class="lineal">
+                                    <img src="../icons/helmet.ico" alt="">
+                                    <p>Sergio Perez</p>
+                                </div>
+                                <div class="lineal">
+                                    <img src="../icons/helmet.ico" alt="">
+                                    <p>Lance Stroll</p>
+                                </div>
+                            </div>
+                            <div class="panel-bot">
+                                <img src="../resources/spon-septima.png" alt="">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="panels">
+                                <i class=" icon fas fa-trophy"></i>
+                                <h3>Podios acabados</h3>
+                                <p>N/A</p>
+                            </div>
+                            <div class="panels">
+                                <i class=" icon fas fa-award"></i>
+                                <h3>Títulos de campeonato</h3>
+                                <p>N/A</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="img">
+                    <div class="imgfondo" style="background-image: url('../resources/septima.jpg');"></div>
+                </div>
+            </a>
+        </section>
+    </div>
+
+    <!-- Equipo 10 -->
+    <div class="equipo">
+        <section class="block">
+            <a href="williams.html">
+                <div class="info" style="border-right: 8px solid #FFFFFF;">
+                    <div class="c-info">
+                        <div class="left">
+                            <div class="panel-up">
+                                <img src="../resources/ingla.jpg">
+                                <h2>Williams </h2>
+                            </div>
+                            <div class="panel-mid">
+                                <div class="lineal">
+                                    <img src="../icons/helmet.ico" alt="">
+                                    <p>Robert Kubica</p>
+                                </div>
+                                <div class="lineal">
+                                    <img src="../icons/helmet.ico" alt="">
+                                    <p>George Rusell</p>
+                                </div>
+                            </div>
+                            <div class="panel-bot">
+                                <img src="../resources/spon-decima.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="panels">
+                                <i class=" icon fas fa-trophy"></i>
+                                <h3>Podios acabados</h3>
+                                <p>311</p>
+                            </div>
+                            <div class="panels">
+                                <i class=" icon fas fa-award"></i>
+                                <h3>Títulos de campeonato</h3>
+                                <p>9</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="img">
+                    <div class="imgfondo" style="background-image: url('../resources/decima.jpg');"></div>
+                </div>
+            </a>
+        </section>
+    </div>
+
+    <!--Footer-->
+    <footer class="contenedor py-5 colorfurel" width="500">
+        <div class="row">
+            <div class="col-12 col-md">
+                <a class="py-2" href="#">
+                    <a class="py-2 d-none d-md-inline-block" href="">
+                        <img alt="Formula 1" src="../resources/ff.png" style="margin-left: 100px;" width="90" />
+                    </a>
+                </a>
+                <small class="d-block mb-3 text-muted" style="margin-left: 100px;">© 2017-2019</small>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Features</h5>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <a class="text-muted" href="#">Cool stuff</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#">Random feature</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#">Team feature</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#">Stuff for developers</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#">Another one</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#">Last time</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <a class="text-muted" href="#">Resource</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#">Resource name</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#">Another resource</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#">Final resource</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <a class="text-muted" href="#">Business</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#">Education</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#">Government</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#">Gaming</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <a class="text-muted" href="#">Team</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#">Locations</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#">Privacy</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#">Terms</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

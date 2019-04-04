@@ -1,0 +1,189 @@
+@font-face {
+    font-family: 'Formula1';
+    src: url('../letra/Formula1-Regular_web_0.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Formula1-Bold';
+    src: url('../letra/Formula1-Bold_web_0.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'TitilliumWeb';
+    src: url('../letra/TitilliumWeb-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Formula1;
+    background-color: #EFEFEF;
+}
+
+.sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+}
+
+.site-header {
+    background-color: rgba(0, 0, 0, .85);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    min-width: 750px;
+}
+
+.justify-content-between {
+    -ms-flex-pack: justify !important;
+    justify-content: space-between !important;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+.container {
+    max-width: 960px;
+}
+
+.contenedor {
+    margin-bottom: auto;
+    width: 100%;
+}
+
+/*Custom translucent site header*/
+.site-header {
+    background-color: #E10600;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+.site-header a {
+    color: #fff;
+    transition: ease-in-out color .15s;
+}
+
+/*Efecto de las letraqs en el navbar*/
+.site-header a:hover {
+    color: #15151E;
+    text-decoration: none;
+}
+
+#fotico {
+    display: block;
+    height: 25px;
+    width: 80px;
+    color: #fff;
+    transition: ease-in-out color .15s;
+
+}
+
+/* Barra de Eventos */
+body .evento {
+    padding-left: 30px;
+    padding-bottom: 30px;
+    margin-top: 65px;
+    height: 150px;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+body .evento .pista {
+    width: 100px;
+}
+
+body .evento .left {
+    margin-left: 10px;
+    padding-left: 10px;
+    border-top: 1px solid #fff;
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+body .evento .left h2 {
+    font-size: 35px;
+    font-family: Formula1;
+    color: white;
+}
+
+body .evento .left .year {
+    margin-bottom: 5px;
+    margin-left: 10px;
+    height: 25px;
+}
+
+.contenedor {
+    background-color: #15151E;
+    width: 98%;
+}
+
+.inicio {
+    width: 100%;
+    height: 93vh;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.inicio>video {
+    width: 100%;
+    height: 93vh;
+}
+
+.inicio>.centrar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.blan {
+    font-size: 55px;
+    color: #EFEFEF;
+    margin-bottom: 200px;
+}
+
+.vid {
+
+    opacity: 0.3;
+}
+
+h6 {
+    font-size: 15px;
+    color: #EFEFEF;
+    margin-top: -150px;
+}
+
+.fondo {
+    background-color: #15151E;
+}

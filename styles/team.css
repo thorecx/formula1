@@ -1,0 +1,184 @@
+* {
+    text-decoration: none;
+    color: black;
+}
+
+body .site-header a:hover {
+    color: #15151E;
+    text-decoration: none;
+}
+
+body .equipo {
+    margin-bottom: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body .equipo .block {
+    background-color: #fff;
+    width: 94%;
+    margin: auto;
+    padding: 0px 10px;
+}
+
+body .equipo .block h1 {
+    margin: 30px 0px;
+    margin-left: 35px;
+    text-align: left;
+    font-family: Formula1;
+    font-size: 2rem;
+}
+
+body .equipo .block a {
+    margin: auto;
+    width: 95%;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+}
+
+body .equipo .block a .info {
+    width: 50%;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+}
+
+body .equipo .block a .info .c-info {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+body .equipo .block a .info .c-info .left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+body .equipo .block a .info .c-info .left .panel-up {
+    display: flex;
+    flex-direction: row;
+}
+
+body .equipo .block a .info .c-info .left .panel-up img {
+    width: 35px;
+    height: 25px;
+    margin: 0px 15px;
+}
+
+body .equipo .block a .info .c-info .left .panel-up h2 {
+    font-family: Formula1;
+    font-size: 22px;
+    color: #000;
+}
+
+body .equipo .block a .info .c-info .left .panel-mid {
+    margin: 10px 0px;
+}
+
+body .equipo .block a .info .c-info .left .panel-mid .lineal {
+    margin: 10px 0px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+body .equipo .block a .info .c-info .left .panel-mid .lineal p {
+    font-family: Formula1;
+    font-size: 12px;
+    margin: 5px 0px;
+    margin-left: 15px;
+}
+
+body .equipo .block a .info .c-info .left .panel-bot {}
+
+body .equipo .block a .info .c-info .left .panel-bot img {
+    margin-left: 15px;
+    width: 65%;
+}
+
+body .equipo .block a .info .c-info .right {
+    width: 50%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+body .equipo .block a .info .c-info .right .panels {
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+body .equipo .block a .info .c-info .right .panels .icon {
+    font-size: 30px;
+    color: #000;
+}
+
+body .equipo .block a .info .c-info .right .panels h3 {
+    font-family: Formula1;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+body .equipo .block a .info .c-info .right .panels p {
+    font-family: Formula1;
+    font-size: 12px;
+    text-align: center;
+    margin: auto;
+    text-align: right;
+}
+
+body .equipo .block a .img {
+    width: 50%;
+    overflow: hidden;
+}
+
+body .equipo .block a .img .imgfondo {
+    width: 100%;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-attachment: contain;
+    background-position: center;
+    background-size: cover;
+    transition: all .3s;
+}
+
+body .equipo .block a:hover .info {
+    background-color: #171717;
+}
+
+body .equipo .block a:hover .info .c-info .left .panel-up h2 {
+    font-family: Formula1;
+    color: #fff;
+}
+
+body .equipo .block a:hover .info .c-info .left .panel-mid .lineal p {
+    color: #fff;
+}
+
+body .equipo .block a:hover .info .c-info .right .panels h3 {
+    color: #fff;
+}
+
+body .equipo .block a:hover .info .c-info .right .panels p {
+    color: #fff;
+}
+
+body .equipo .block a:hover .info .c-info .right .panels .icon {
+    color: #fff;
+}
+
+body .equipo .block a:hover .img .imgfondo {
+    transform: scale(1.15);
+    transition: all .3s;
+}
+
+.contenedor {
+    background-color: #15151E;
+}
